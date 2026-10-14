@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+    --danger-color: #ef4444;
+    --danger-hover: #dc2626;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--text-main);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+select:focus,
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Botão principal de cadastro */
+button[type="submit"] {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Estilização do Botão de Atualizar Lista */
+#btn-atualizar {
+    width: auto;
+    padding: 6px 14px;
+    background-color: #e2e8f0;
+    color: #334155;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    transition: background-color 0.2s;
+}
+
+#btn-atualizar:hover {
+    background-color: #cbd5e1;
+}
+
+/* Lista de Reservas Cadastradas */
+#lista-reservas {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lista-reservas li {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+/* Botão de Excluir individual de cada reserva */
+#lista-reservas button {
+    background-color: transparent;
+    color: var(--danger-color);
+    border: 1px solid #fecaca;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: auto;
+    margin-top: 0;
+    transition: all 0.2s;
+}
+
+#lista-reservas button:hover {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    text-align: center;
+}

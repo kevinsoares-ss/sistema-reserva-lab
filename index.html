@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Laboratórios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Reservar Laboratório</h2>
+
+        <!-- Formulário (CREATE) -->
+        <form id="form-reserva">
+            <label for="lab">Laboratório:</label>
+            <select id="lab" required>
+                <option value="">Carregando laboratórios...</option>
+            </select>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+
+            <label for="inicio">Início:</label>
+            <input type="time" id="inicio" required>
+
+            <label for="fim">Fim:</label>
+            <input type="time" id="fim" required>
+
+            <button type="submit">Verificar e Reservar</button>
+        </form>
+
+        <!-- Mensagens de erro ou sucesso -->
+        <div id="mensagem"></div>
+
+        <!-- Seção de Consulta e Exclusão (READ / DELETE) -->
+        <div style="margin-top: 35px;">
+            <h3>Reservas Cadastradas</h3>
+
+            <!-- Botão de Atualizar Lista -->
+            <button id="btn-atualizar" style="margin-bottom: 12px; padding: 6px 12px; cursor: pointer;">Atualizar
+                Lista</button>
+
+            <ul id="lista-reservas" style="padding-left: 20px; margin-top: 10px;">
+                <li>Carregando reservas...</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Vinculação do script JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
